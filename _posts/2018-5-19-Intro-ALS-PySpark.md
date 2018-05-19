@@ -224,8 +224,6 @@ sns.violinplot([pandas_df.label])
 ```
 ![_config.yml]({{ site.baseurl }}/images/distribution.png)
 
----
-
 #### Paso 4: Selección del modelo y ajuste de hiperparámetros.
 
 El proceso de selección del modelo se realizará a través del análisis de validación cruzada con ajuste automático de hiperparámetros. Este ajuste se hace definiendo los posibles valores de los hiperparámetros del modelo y ejecutando una búsqueda en rejilla sobre éstas para comparar el rendimiento de los modelos resultantes y finalmente obtener el óptimo. Los hiperparámetros del modelo ALS son:
@@ -310,7 +308,6 @@ Mean-square error (MSE) = 0.0416923608976
 r² metric = 0.650955563635
 Mean Absolute Error (MAE) = 0.140817836752
 ```
-
 Para obtener una evaluación más precisa del sobreajuste del modelo y del rendimiento real, una buena práctica es, una vez que se ha seleccionado el modelo ALS con el mejor ajuste de hiperparámetros (proceso de selección del modelo, realizado por validación cruzada con búsqueda en rejilla), se evalua el modelo ajustado para distintos conjuntos de entrenamiento y test, seleccionados aleatoriamente a través de múltiples K-fold y, finalmente, se promedian los resultados de las distintas métricas de evaluación calculadas en cada K-fold. Este proceso nos proporcionará una evaluación más precisa de nuestro motor de recomendación como predictor o regresor de ratings para nuevos datos entrantes nunca antes vistos por el sistema.
 
 ```python
@@ -432,7 +429,6 @@ Recommended contact for user 1000:
 +----------+------+----------+
 only showing top 1 row
 ```
----
 
 #### Conclusiones
 
@@ -441,4 +437,4 @@ Apache Flink también ofrece una implementación del algoritmo ALS para filtrado
 
 Aunque el sistema en producción requeriría mayor ajuste, complejidad, versatilidad y eficiencia, debiendo actualizar las predicciones en streaming (solución asimismo implementable con Spark o Flink), espero que este primer acercamiento al Filtrado Colaborativo haya sido de utilidad.
 
-See you'll on my social networks!
+See y'all on my social networks!
