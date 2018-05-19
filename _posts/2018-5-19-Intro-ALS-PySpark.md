@@ -27,7 +27,7 @@ El dataset utilizado para esta implementación de un sistema de recomendación c
 ![_config.yml]({{ site.baseurl }}/images/scheme.png)
 
 #### Paso 1: Importar librerías e instanciar una nueva sesión Spark.
-´´´ python
+```python
 from __future__ import absolute_import, print_function, division
 import numpy as np
 import pandas as pd
@@ -45,4 +45,4 @@ spark = SparkSession.builder\
        .appName("Simple recommendation engine using Spark MLlib")\
        .config("spark.some.config.option", "config-value")\
        .getOrCreate()\
-´´´
+```
