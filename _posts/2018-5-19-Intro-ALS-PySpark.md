@@ -437,7 +437,8 @@ only showing top 1 row
 #### Conclusiones
 
 Finalmente, hay que señalar que las predicciones obtenidas a través del algoritmo ALS con retroalimentación implícita disponible en PySpark no son valores normalizados, existiendo incluso la posibilidad de forzar a valores no negativos mediante el argumento del constructor de la clase ALS, nonnegative. Asimismo pueden aparecer valores  NaN tras ejecutar el proceso de validación cruzada, a través de la clase de PySpark CrossValidator, haciendo uso de una métrica de evaluación de regresión (RMSE, MSE, R2, MAE), en el caso de que el subconjunto de datos de validación/test contenga usuarios/items no presentes en el subconjunto de datos de entrenamiento, las soluciones se proponen en SPARK-14489 y SPARK-19345.
-Apache Flink también ofrece una implementación del algoritmo ALS para filtrado colaborativo, cuya ejecución haciendo uso de éste y otros datasets benchmark sería interesante comparar con la realizada aquí en PySpark, disponible en mi github.
+Apache Flink también ofrece una implementación del algoritmo ALS para filtrado colaborativo, cuya ejecución haciendo uso de éste y otros datasets benchmark sería interesante comparar con la realizada aquí en PySpark, disponible en mi github: https://github.com/aracelimanzanoch/simple-pyspark-recommedation-engine/blob/master/simple-pyspark-recommendation-engine.ipynb
+
 Aunque el sistema en producción requeriría mayor ajuste, complejidad, versatilidad y eficiencia, debiendo actualizar las predicciones en streaming (solución asimismo implementable con Spark o Flink), espero que este primer acercamiento al Filtrado Colaborativo haya sido de utilidad.
 
-Estaré encantada de leer comentarios y preguntas, y de estar en contacto a través de mi LinkedIn y Twitter, y, sobre todo, de seguir aprendiendo sobre un tema con tanta perspectiva de aplicación como es el de los sistemas de recomendación.
+See you'll on my social networks!
